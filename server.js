@@ -1,12 +1,11 @@
 /**
  * Created by lcorozco on 07-06-16.
  */
-var http = require("http");
-
-var manager = function(req, resp){
+var http = require("http"),
+    fs = require("fs");
+var data = fs.readFileSync("./index.html");
+http.createServer(function(req, res){
     console.log("Hello, this is my first node js app");
-    resp.end("Bye bye....:)");
-};
-
-var server = http.createServer(manager);
-server.listen(3000);
+    res.write(data);
+    res.end("Bye bye....:)");
+}).listen(3000);

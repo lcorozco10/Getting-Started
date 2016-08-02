@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello, this is static file</title>
+    <link rel="icon" type="image/x-icon" href="http://blog.trevnorris.com/favicon.ico" />
 </head>
 <body>
-<h1>Hello, this is static file</h1>
+<h1><code>Hello, {name}, good job.</code></h1> <code>{today}</code>
+<form action="/">
+    <label for="name">What's your name?
+        <input type="text" name="name" placeholder="name">
+    </label>
+</form>
 </body>
 </html>
